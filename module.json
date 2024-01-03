@@ -1,0 +1,257 @@
+{
+	"name": "MIDI Fighter Twister",
+	"type": "MIDI",
+	"path": "Hardware",
+	"version": "1.0.0",
+	"description": "MIDI Module for DJ TechTool's MFT",
+	"url": "https://github.com/benkuper/MidiFighterTwister-Chataigne-Module",
+	"downloadURL": "https://github.com/benkuper/MidiFighterTwister/archive/refs/heads/main.zip",
+	"hasInput": true,
+	"hasOutput": true,
+	"hideDefaultCommands": true,
+	"parameters": {
+		"type": "Container",
+		"Colors": {
+			"type": "Container",
+			"Color 1": {
+				"type": "Color"
+			},
+			"Color 2": {
+				"type": "Color"
+			},
+			"Color 3": {
+				"type": "Color"
+			},
+			"Color 4": {
+				"type": "Color"
+			},
+			"Color 5": {
+				"type": "Color"
+			},
+			"Color 6": {
+				"type": "Color"
+			},
+			"Color 7": {
+				"type": "Color"
+			},
+			"Color 8": {
+				"type": "Color"
+			},
+			"Color 9": {
+				"type": "Color"
+			},
+			"Color 10": {
+				"type": "Color"
+			},
+			"Color 11": {
+				"type": "Color"
+			},
+			"Color 12": {
+				"type": "Color"
+			},
+			"Color 13": {
+				"type": "Color"
+			},
+			"Color 14": {
+				"type": "Color"
+			},
+			"Color 15": {
+				"type": "Color"
+			},
+			"Color 16": {
+				"type": "Color"
+			}
+		}
+	},
+	"defaults": {
+		"devices": [
+			"Midi Fighter Twister",
+			"Midi Fighter Twister"
+		],
+		"autoAdd": false
+	},
+	"hideDefaultParameters": [
+		"autoAdd",
+		"autoFeedback",
+		"useHierarchy",
+		"octaveShift",
+		"usePitchForNoteNames"
+	],
+	"scripts": [
+		"mft.js"
+	],
+	"values": {
+		"type": "Container",
+		"Buttons": {
+			"type": "Container",
+			"Button 1": {
+				"type": "Boolean"
+			},
+			"Button 2": {
+				"type": "Boolean"
+			},
+			"Button 3": {
+				"type": "Boolean"
+			},
+			"Button 4": {
+				"type": "Boolean"
+			},
+			"Button 5": {
+				"type": "Boolean"
+			},
+			"Button 6": {
+				"type": "Boolean"
+			},
+			"Button 7": {
+				"type": "Boolean"
+			},
+			"Button 8": {
+				"type": "Boolean"
+			},
+			"Button 9": {
+				"type": "Boolean"
+			},
+			"Button 10": {
+				"type": "Boolean"
+			},
+			"Button 11": {
+				"type": "Boolean"
+			},
+			"Button 12": {
+				"type": "Boolean"
+			},
+			"Button 13": {
+				"type": "Boolean"
+			},
+			"Button 14": {
+				"type": "Boolean"
+			},
+			"Button 15": {
+				"type": "Boolean"
+			},
+			"Button 16": {
+				"type": "Boolean"
+			}
+		},
+		"Encoders": {
+			"type": "Container",
+			"Encoder 1": {
+				"type": "Float",
+				"min": 0,
+				"max": 1
+			},
+			"Encoder 2": {
+				"type": "Float",
+				"min": 0,
+				"max": 1
+			},
+			"Encoder 3": {
+				"type": "Float",
+				"min": 0,
+				"max": 1
+			},
+			"Encoder 4": {
+				"type": "Float",
+				"min": 0,
+				"max": 1
+			},
+			"Encoder 5": {
+				"type": "Float",
+				"min": 0,
+				"max": 1
+			},
+			"Encoder 6": {
+				"type": "Float",
+				"min": 0,
+				"max": 1
+			},
+			"Encoder 7": {
+				"type": "Float",
+				"min": 0,
+				"max": 1
+			},
+			"Encoder 8": {
+				"type": "Float",
+				"min": 0,
+				"max": 1
+			},
+			"Encoder 9": {
+				"type": "Float",
+				"min": 0,
+				"max": 1
+			},
+			"Encoder 10": {
+				"type": "Float",
+				"min": 0,
+				"max": 1
+			},
+			"Encoder 11": {
+				"type": "Float",
+				"min": 0,
+				"max": 1
+			},
+			"Encoder 12": {
+				"type": "Float",
+				"min": 0,
+				"max": 1
+			},
+			"Encoder 13": {
+				"type": "Float",
+				"min": 0,
+				"max": 1
+			},
+			"Encoder 14": {
+				"type": "Float",
+				"min": 0,
+				"max": 1
+			},
+			"Encoder 15": {
+				"type": "Float",
+				"min": 0,
+				"max": 1
+			},
+			"Encoder 16": {
+				"type": "Float",
+				"min": 0,
+				"max": 1
+			}
+		}
+	},
+	"commands": {
+		"Set Value": {
+			"menu": "",
+			"callback": "setEncoderValue",
+			"parameters": {
+				"ID": {
+					"type": "Integer",
+					"default": 1,
+					"min": 1,
+					"max": 16
+				},
+				"Value": {
+					"type": "Float",
+					"default": 0,
+					"min": 0,
+					"max": 1,
+					"mappingIndex": 0
+				}
+			}
+		},
+		"Set Color": {
+			"menu": "",
+			"callback": "setColor",
+			"parameters": {
+				"ID": {
+					"type": "Integer",
+					"default": 1,
+					"min": 1,
+					"max": 16
+				},
+				"Color": {
+					"type": "Color",
+					"mappingIndex": 0
+				}
+			}
+		}
+	}
+}
