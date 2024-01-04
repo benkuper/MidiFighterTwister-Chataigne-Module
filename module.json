@@ -5,7 +5,7 @@
 	"version": "1.0.0",
 	"description": "MIDI Module for DJ TechTool's MFT",
 	"url": "https://github.com/benkuper/MidiFighterTwister-Chataigne-Module",
-	"downloadURL": "https://github.com/benkuper/MidiFighterTwister/archive/refs/heads/main.zip",
+	"downloadURL": "https://github.com/benkuper/MidiFighterTwister-Chataigne-Module/archive/refs/heads/main.zip",
 	"hasInput": true,
 	"hasOutput": true,
 	"hideDefaultCommands": true,
