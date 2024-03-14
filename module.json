@@ -2,7 +2,7 @@
 	"name": "MIDI Fighter Twister",
 	"type": "MIDI",
 	"path": "Hardware",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "MIDI Module for DJ TechTool's MFT",
 	"url": "https://github.com/benkuper/MidiFighterTwister-Chataigne-Module",
 	"downloadURL": "https://github.com/benkuper/MidiFighterTwister-Chataigne-Module/archive/refs/heads/main.zip",

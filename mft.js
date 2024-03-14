@@ -50,20 +50,24 @@ function moduleValueChanged(value) {
 
         var id = parseInt(value.name.substring(7, 9));
         if (fromDevice[id - 1]) return;
-        sendEncoder(id -1, value.get());
+        sendEncoder(id - 1, value.get());
     }
 }
 
-function setEncoderValue(encoder, value) {
-    local.values.encoders.getChild("encoder" + id).set(value / 127);
+function setEncoderValue(id, value) {
+    local.values.encoders.getChild("encoder" + id).set(value);
+}
 
-    var id = parseInt(encoder.name.substring(7, 9));
-    var color = local.parameters.colors.getChild("color" + id).get();
+function setColor(id, color) {
+    var encoder = local.values.encoders.getChild("encoder" + id);
+
+    var colorParam = local.parameters.colors.getChild("color" + id);
+    // var id = parseInt(encoder.name.substring(7, 9));
+    var color = colorParam.get();
     var h = rgb2hsl(color[0], color[1], color[2]);
     var hue = (value / 127) * .64 + .32;
     var rgb = hsl2rgb(hue, 1, 1);
-    local.parameters.colors.getChild("color" + id).set(rgb);
-    if (!fromDevice[id - 1]) sendEncoder(id - 1, value);
+    colorParam.set(rgb);
 }
 
 function sendEncoder(number, value) {
